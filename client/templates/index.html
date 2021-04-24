@@ -18,12 +18,21 @@
         <button type="submit">Get Weather info</button>
       </form>
     </div>
-    <div class="content">
-      {% if desc %}
-      <p>City: {{city}}</p>
-      <p>Weather: {{desc}}</p>
-      <p>Temperature: {{temp}}</p>
-      {% endif %}
+    <div class="content display">
+      <ul>
+        <li>
+          <p class="color1">City</p>
+          <p class="color4">{% if desc %}{{city}}{% endif %}</p>
+        </li>
+        <li>
+          <p class="color2">Weather</p>
+          <p class="color5">{% if desc %}{{desc}}{% endif %}</p>
+        </li>
+        <li>
+          <p class="color3">Temperature</p>
+          <p class="color6">{% if desc %}{{temp}}{% endif %}</p>
+        </li>
+      </ul>
     </div>
   </body>
 </html>
