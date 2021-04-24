@@ -79,11 +79,27 @@ ul li p {
   background-color: rgb(0, 92, 145);
 }
 .color4 {
-  background-color: rgb(133, 198, 255);
+  background-color: rgb(119, 179, 233);
 }
 .color5 {
-  background-color: rgb(85, 176, 255);
+  background-color: rgb(79, 164, 238);
 }
 .color6 {
-  background-color: rgb(51, 139, 216);
+  background-color: rgb(44, 128, 202);
+}
+
+@media screen and (max-width: 900px) {
+  body {
+    flex-direction: column;
+    padding: 10%;
+  }
+  .content {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .content {
+    width: 70%;
+  }
 }

@@ -4,6 +4,8 @@ from flask import Flask, render_template, request
 from dotenv import load_dotenv
 load_dotenv()
 
+API_KEY = os.getenv('API_KEY')
+
 app = Flask(
         __name__,
         template_folder="./client/templates",
@@ -11,7 +13,7 @@ app = Flask(
     )
 
 def get_weather(city):
-    url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={os.getenv('API_KEY')}"
+    url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={API_KEY}"
     weather_details = requests.get(url).json()
     return {
         "description" : weather_details["weather"][0]["description"],
